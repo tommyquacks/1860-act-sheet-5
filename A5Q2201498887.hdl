@@ -6,5 +6,3 @@ CHIP A5Q2201498887 {
         And(a=notU, b=R, out=notUandR);
         Or(a=notUandR, b=L, out=Z);
 }
-    push temp 0
-    return
