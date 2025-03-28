@@ -2,8 +2,8 @@ CHIP A5Q2201498887 {
     IN U, R, L;
     OUT Z;
     PARTS:
-    Not(in=U, out=notU);
-    And(a=notU, b=R, out=and1);
-    And(a=U, b=L, out=and2);
-    Or(a=and1, b=and2, out=Z);
+    Or(a=U, b=R, out=or1);
+    Or(a=U, b=L, out=or2);
+    And(a=or1, b=or2, out=and1);
+    And(a=and1, b=L, out=Z);
 }
