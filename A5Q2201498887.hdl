@@ -3,6 +3,6 @@ CHIP A5Q2201498887 {
     OUT Z;
     
     PARTS:
-    And(a=U, b=R, out=UR);
-    Or(a=UR, b=L, out=Z);
+    Or(a=U, b=R, out=UorR);
+    And(a=UorR, b=L, out=Z);
 }
