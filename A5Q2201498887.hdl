@@ -1,9 +1,8 @@
 CHIP A5Q2201498887 {
     IN U, R, L;
     OUT Z;
+    
     PARTS:
-    Or(a=U, b=R, out=or1);
-    Or(a=U, b=L, out=or2);
-    And(a=or1, b=or2, out=and1);
-    And(a=and1, b=L, out=Z);
+    And(a=U, b=R, out=UR);
+    Or(a=UR, b=L, out=Z);
 }
